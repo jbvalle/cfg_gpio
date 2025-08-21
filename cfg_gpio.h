@@ -18,6 +18,13 @@ typedef enum {
     GPIO_MODE_ANALOG
 } GpioModeType;
 
+/**
+ * @brief GPIO Level
+ *
+ * Fields:
+ * - GPIO_LEVEL_LOW = 0
+ * - GPIO_LEVEL_HIGH = 1
+ */
 typedef enum{
     GPIO_LEVEL_LOW,
     GPIO_LEVEL_HIGH
@@ -50,7 +57,7 @@ typedef struct{
 /**
  * @brief GPIO configuration array.
  *
- * Each element of this array represents the configuration of a GPIO pin.
+ * Each element of this array represents the configuration struct of a GPIO pin.
  *
  * Fields:
  * - port         : The GPIO port number (e.g., 0, 1, 2…).
