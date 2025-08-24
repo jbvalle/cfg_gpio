@@ -17,9 +17,10 @@ GPIO_TypeDef * const GpioPorts[] = {
 };
 
 const GpioPinConfigType GpioConfig[] = {
-    {.port = GPIO_PORT_A, .pin = 5, .mode = GPIO_MODE_OUTPUT, .defaultLevel = GPIO_LEVEL_LOW},
-    {.port = GPIO_PORT_B, .pin = 17, .mode = GPIO_MODE_OUTPUT, .defaultLevel = GPIO_LEVEL_LOW},
-    {.port = GPIO_PORT_B, .pin = 14, .mode = GPIO_MODE_OUTPUT, .defaultLevel = GPIO_LEVEL_LOW},
+    {.port = GPIO_PORT_D, .pin = 12, .mode = GPIO_MODE_OUTPUT, .defaultLevel = GPIO_LEVEL_LOW},
+    {.port = GPIO_PORT_D, .pin = 13, .mode = GPIO_MODE_OUTPUT, .defaultLevel = GPIO_LEVEL_LOW},
+    {.port = GPIO_PORT_D, .pin = 14, .mode = GPIO_MODE_OUTPUT, .defaultLevel = GPIO_LEVEL_LOW},
+    {.port = GPIO_PORT_D, .pin = 15, .mode = GPIO_MODE_OUTPUT, .defaultLevel = GPIO_LEVEL_LOW},
 };
 
 const uint8_t GpioConfigCount = sizeof(GpioConfig) / sizeof(GpioConfig[0]);
