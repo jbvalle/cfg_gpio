@@ -5,15 +5,21 @@
 GPIO_TypeDef * const GpioPorts[] = {
     GPIOA,
     GPIOB,
-#if defined(MCU_STM32F429ZI)
-    GPIOK,
-#elif defined(MCU_STM32F401RE)
+    GPIOC,
+    GPIOD,
+    GPIOE,
+    GPIOF,
+    GPIOG,
     GPIOH,
-#endif
+    GPIOI,
+    GPIOJ,
+    GPIOK,
 };
 
 const GpioPinConfigType GpioConfig[] = {
     {.port = GPIO_PORT_A, .pin = 5, .mode = GPIO_MODE_OUTPUT, .defaultLevel = GPIO_LEVEL_LOW},
+    {.port = GPIO_PORT_B, .pin = 17, .mode = GPIO_MODE_OUTPUT, .defaultLevel = GPIO_LEVEL_LOW},
+    {.port = GPIO_PORT_B, .pin = 14, .mode = GPIO_MODE_OUTPUT, .defaultLevel = GPIO_LEVEL_LOW},
 };
 
 const uint8_t GpioConfigCount = sizeof(GpioConfig) / sizeof(GpioConfig[0]);
