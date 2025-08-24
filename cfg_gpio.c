@@ -1,10 +1,15 @@
 #include "cfg_gpio.h"
-#include "stm32f401re_regs.h"
+//#include "stm32f401re_regs.h" ~legacy
+#include "mcu.h"
 
 GPIO_TypeDef * const GpioPorts[] = {
     GPIOA,
     GPIOB,
-    GPIOH
+#if defined(MCU_STM32F429ZI)
+    GPIOK,
+#elif defined(MCU_STM32F401RE)
+    GPIOH,
+#endif
 };
 
 const GpioPinConfigType GpioConfig[] = {
